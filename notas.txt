@@ -1,0 +1,128 @@
+2017 10 25
+Bienvenida al curso
+	Vamos a ver:
+		* Que es un datascientist?
+		* En que temas se usa datascients
+		* Logros de la ciencia de datos
+		* Workflow tipico de una data scientist:
+				- Formular una pregunta
+				- Recopilar datos
+				- Limpiar datos
+				- Construir un modelo matemático
+				- Validar el modelo
+				- Comunicar resultados
+				- Implementar sistemas ingenieriles para automatizar el trabajo
+
+
+¿Qué es un Data Scientist?:
+	Una persona que construye sistemas que intentan encontrar patrones en datos / William Wolf
+
+	Son más que nada programadores.
+	
+	Esta persona entiende el core del negocio en el que trabaja y puede traducir los problemas del 
+		negocio de la empresa en terminos matemáticos y cuando encuentra soluciones a estos issues
+		los traduce en código, es decir crea un programa para automarizar esta solución.
+
+	Para ser un data scientist:
+		Hay que tener conocimiento de programación (los data scientist son más que nada programadores),
+			conocimiento en matemáticas y debe tener experiencia en el negocio.
+
+	Un data scientist sabe más de estadistica que un programador y más de programación que un
+		estadistico.
+
+	Es una persona que utiliza conocimientos del negocio, las estadísticas y la programación para 
+		encontrar patrones que apoyen la toma de decisiones.
+
+
+
+Ejemplos se uso de data science
+	
+	Coches autonomos (tesla)
+		La red neuronal convolucional: Algoritmo que intenta imitar a lo que haga un ser humano mientras conduce.
+
+
+ 	Predecir crimen en Rio de janeiro
+ 		output: Lo que paso input: el contexto	
+
+
+
+Cómo funciona una búsqueda de Google y el Algoritmo de Spotify
+
+	¿Qué sucede cuando buscas en Google?
+		Cuando buscas pasas un input de tu búsqueda y Google genera un output que es una lista ordenada que
+			satisfacen tu búsqueda.
+
+		Para generar esta lista Google dispone de un algoritmo que selecciona estas páginas entre millones de páginas.
+
+
+	¿Cómo se personalizan tus playlist en Spotify?
+		Dada la musica que has escuchado en el pasado sirve como input de machine learning que genera un
+		output de música que podrían gustarte de acuerdo a esto.
+
+
+	Recuerda: No siempre la parte más compleja es hacer un modelo matemático.
+
+
+
+Retos de un data scientist
+
+	Una semana típica de un data scientist:
+		* Análisis exploratorio: Observar! Entender cuales son las causas del problema.
+
+		* Construir un modelo matemático: Crear un modelo para automatizar el proceso de predecir el
+				problema. Lapiz y papel.
+
+		* Construir un sistema ingenieril para automatizar dicho modelo: Programar. Crear un programa para
+				automatizar el modelo.
+
+		* Coordinar con el negocio: Convencer a los gerentes que el modelo funciona y que la inversión va a
+				ser fructifera.
+
+		* Explicar resultados: a los involucrados en el tema. Esta explicación deber ser lo más clara
+				posible teniendo en cuenta que las personas a las que vamos a explicar no son expertos en 
+				matematicas ni programación.
+
+		- No tienen que desarrollarse siempre todas estas cosas en una sola semana pero son las que se
+			realizan.
+
+
+	Un año típico:
+		* Desarrollar relaciones: Con los gerentes o las personas necesarias , para empaparce del negocio
+				y crear un ambiente de colaboración. No se trabaja solo.
+
+		* Evangelizar una cultura de datos dentro de la empresa: Convencer que todos los datos son de
+				utilidad cuando se usan de manera correcta. Una empresa tiene más posibilidades cuando 
+				toma decisiones basadas en datos.
+
+		* Construir herramientas de uso interno: ejemplo: dashboards. Construir herramientas que faciliten
+				el trabajo de las personas de la empresa. 
+
+		* Construir sistemas y features para usuarios externos: las listas personalizadas de spotify, las
+				busquedas de google. Son las herramientas que se dirigen al cliente y que le dan un plus 
+				a los servicios que presta la empresa.
+
+		* Construir y mantener sistemas ingenieriles de ETL: Obtener datos de fuentes externas para poder
+				usarlos en beneficio de la empresa. ETL (Extraer -extract-, Transformar -transform-, Cargar -load-)
+
+				ETL pipeline: https://es.wikipedia.org/wiki/Extract,_transform_and_load
+
+
+	- No es posible ser data scientist sin ser parte de una comunidad, dando y recibiendo conocimiento
+		constantemente (hay que mantenerce actualizados)
+
+
+Porqué surge data science ahora y no antes?
+
+	* La gran cantidad de datos que se generan cada minuto de cada dia.
+	* El poder de procesamiento de datos que está disponible en este momento.
+
+
+
+En que campos trabajan los data scientist?
+
+	Para todos los campos actualemte todas las industrias buscan un cientifico de datos
+
+	Datascientist de la academia: es el que hace las invetigaciones desde la academia. Para estos
+		si es más necesaria la especialización universitaria.
+
+	Datascientist de la industria: es que el trabaja en una empresa y enriquece la industria.
