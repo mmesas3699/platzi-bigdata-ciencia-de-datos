@@ -126,3 +126,160 @@ En que campos trabajan los data scientist?
 		si es más necesaria la especialización universitaria.
 
 	Datascientist de la industria: es que el trabaja en una empresa y enriquece la industria.
+
+
+
+Cuales habilidades y herramientas usa un data scientist?
+	
+	* Matemáticas: Estadistica, Machine learning, Optimización (de procesos y datos)
+	* Ingenieria: Python, R, Scala
+
+
+
+	- El espacio del problema, Cuanto más lo entiendes mejor haces tu trabajo.
+
+		Antes de escribir una sola línea de código hay que responder a las siguientes
+			preguntas:
+
+			* Cual es el objetivo? (tener claro el objetivo)
+			* Cual es la pregunta exacta, que queremos modelar?
+			* Como se define el exito? Debe nuestra predicción sobre pasar cierto nivel de
+				confianza, a quienes se muestra la predicción?
+
+
+		Es mejor pasar más tiempo entendiendo el problema que programando.
+
+
+Configurando un notebook
+
+	>>> pip install jupyter (para installar jupyter notebook)
+
+
+	- https://www.kaggle.com/datasets (para descargar datasets)
+
+
+	>>> jupyter notebook		# para lanzar el notebook
+
+	- Para ejecutar comandos de terminal desde el notebook usar el signo '!'
+
+			>>> !pip install pandas
+
+	DATAFRAME: Serie de datos organizados en filas y columnas.
+
+	Panda series: es el tipo de dato de cada columna.
+
+	----- En el notebook (pokemon-exploracion)
+
+	"Trabajando con un Pandas 'Series'"
+
+		data['Name']		# muestra los datos de la columna 'Name'
+		data.Name 			# tambien muestra los datos de la columna 'Name'
+		type(data['Name'])	# muestra el tipo de dato
+
+
+
+Guía de jupyter
+	
+	Que es?:
+	 	Es un entorno de desarrollo interactivo agnóstico del lenguaje para ciencias 
+	 	de la computación y ciencia de datos.
+
+	Tiene tres componentes:
+		* Aplicación web, para correr código de forma interactiva desde un navegador 
+			web.
+		* Kernels, el proceso que corre el código en el lenguaje especifico y regresa
+			las salida del proceso a la aplicación web, jupyter soporta varios lenguajes:
+			python, julia, R ...
+		* Documentos, código, anotaciones, imágenes, video que compone el notebook, son 
+			almacenados en formato JSON.
+
+
+	Jupyter dashboard
+		Encontramos tres pestañas:
+			Files: archivos del proyecto (muestra los archivos del directorio actual 
+											de la terminal).
+
+			Running: Procesos que se encuentran corriendo.
+			Cluster: Administrador de los procesos en paralelo.
+
+		Y dos botones:
+			Upload: Cargar archivos del computador.
+			New: Crear nuevo archivo de texto, folder, terminal o notebook, en este ultimo
+			lista los lenguajes con los cuales podemos crearlo.
+
+
+		Interfaz:
+			Al crear un nuevo notebook (con el botón 'new') aparecen dos cintas dos
+			opciones:
+
+				* Header: Menú donde se encuentran las opciones de edición y ejecución,
+					siempre estara fijo.
+				* Body: Es el lugar de trabajo, se compone de celdas que pueden ser de 3 
+					tipos:
+
+						- Markdown: Para crear textos con formato que sirvan como guía en
+							el notebook.
+						- Código: Se define el código que se va a ejecutar.
+						- Celdas sin formato: Cuando se necesita incluir texto sin formato.
+
+						En las celda de tipo código para ejecutar podemos usar: ctrl + espacio, 
+						y si queremos ejecutar y crear una nueva celda: shift + espacio.
+
+
+						Con 'tab' se activa el autocompletado.
+
+
+
+
+Continuando con nuestro ejemplo:
+
+	La libreria 'seaborn' crea visualizacione informativas (graficos)
+
+
+Flujo de trabajo de un data scientist
+	
+	La principal lavor es encontrar valor para las empresas o personas a través de datos, para esto
+	se debe seguir un flujo de trabajo que logre convertir estos datos en información significativa.
+
+	El flujo de trabajo se divide en 6 pasos:
+
+		1. Decidir los objetivos: 
+			Como primer paso se deben definir los objetivos de nuestro proceso, estos generalmente
+			se definen con preguntas.
+
+			Los objetivos deben ser claros, medibles y concisos. Hay que tener cuidado con esto ya 
+			que todo el proceso depende de una buena definición de los objetivos.
+
+			La naturaleza de los datos y el proceso va a diferir del tipo de objetivos o preguntas 
+			que se planteen.
+
+		2. Establecer prioridades de medición:
+			Cuando este definidos los objetivos, se debe establecer que se debe medir basado en los
+			objetivos propuestos.
+
+			Se debe tener claro se necesitan para lograr el objetivo.
+
+			- Decidir como medir: Es importante decidir que parametros se van a usar para medir los
+							datos antes de empezar a recolectarlos, como se midan los datos juega 
+							un rol importante en el analisis de los mismos.
+
+		3. Recolección de datos: 
+			Cuando ya se tienen las prioridades y lo parametros para medir, es más facil recolectar
+			los datos.
+
+		4. Limpieza de datos:
+			Los datos que se han recolectado no son necesariamene útiles, en este proceso se debe asegurar que los datos menos útiles no se encuentren en la fase de análisis.
+
+			Cuando se tienen datos no deseados en el sistema, se puede afectar la calidad de las
+			decisiones. Tener datos de calidad es importante para tomar mejores decisiones, este
+			proceso requiere bastante tiempo por lo que es buena idea automatizar el proceso.
+
+		5. Analisis de datos:
+			Cuando se tiene los datos necesarios, es tiempo de procesarlos.
+
+		6. Interpretación y comunicación de resultados:
+			Una vez se han analizado los datos, es tiempo de interpretar los resultados y comunicarlos
+			a las personas involucradas dentro de la empresa.
+
+	
+
