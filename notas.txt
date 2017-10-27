@@ -282,4 +282,312 @@ Flujo de trabajo de un data scientist
 			a las personas involucradas dentro de la empresa.
 
 	
+Workflow tipico de un Datascientist (inferencia-twitter)
 
+	La ambigüedad no va bien con la computadoras
+
+		1. Formular bien la pregunta.
+		2. Una vez definida la pregunta debemos recopilar datos.
+		3. Una vez tengamos los datos debemos limpiarlos.
+
+		'tweepy' libreria para concentarse a tweeter
+
+
+
+Recolectar datos, limpiar datos, dormir con tus datos		
+	
+	Debemos familiarizarnos con los datos, conocerlos y visuarlizarlos de las formas que sea necesario.
+
+	Esta etapa puede incluir:
+
+		* Hacer estadistica.
+		* Crear visualizaciones.
+		* Visualizar la relación de una variable con otra
+
+
+Modelos de datos (inferencia-twitter)
+
+	Construir un modelo:
+
+		Tipicamente se crean dos tipos de modelos:
+
+			* Matematicos: Enterarse intimamente de la relación de un input y un output.
+					Por ejemplo como afecta la hora del dia en que se escriba un tweet la probabilidad que contenga
+					la palabra 'yo'. Con esta información alterar un proceso en la empresa: ejemplo: Queremos 
+					construir un bot que retwitee todos los tweets que contenga 'yo' pero no se cuenta con los
+					recursos para dejar el bot activo todo el día, entonces si encontramos que (analizando las 
+					relaciones) en la mañana es más probable que los tweets contengan 'yo', entonces se dejara el bot solo en la mañana.
+
+			* Predictivos e investigativos: Predecir el futuro -- como lo dice en si la palabra.
+
+				Con el big data es mucho más facil hacer predicciones y reconstruir los inputs para llegar a un 
+				output.
+
+
+
+Construir un modelo (inferencia-twitter)
+		
+		La probabilidad de un número que vive de 0 hasta 1.
+		Beta distribution, es cuantificar la incertidumbre de ser la probabilidad subyacente verdadera.
+
+
+
+Validar su modelo y predecir el futuro
+
+	Una vez tenemos un modelo construido debemos asegurarnos que este funciona, un método para validar un modelo
+	es la regresión lineal con el cual computando un coheficiente de determinación, este nos dice el porcentaje de
+	la variación de una variable del modelo.
+	
+	En un modelo que nos muestre la cantidad de medicamento que ha tomado un paciente, para validarlo con 
+	regresión lineal el coeficiente tendríamos que multiplicarlo por la variable que es el peso del paciente.
+
+	Validando este modelo tendremos la confianza si pasamos otro peso al modelo nos pueda predecir cuanto 
+	medicamento debe suministrarse a un paciente.
+
+	Predicción: predecir la dosis de medicamento que debería suministrarse
+	
+	Vamos a tener el modelo entrenado y con nuevos datos debemos predecir un output con nuevos inputs, para
+	evaluarlo nos toca juzgar su precisión con datos que no fueron usado usados en el entrenamiento del modelo.	
+
+
+
+Comunicar resultados
+
+	Tener buena comunicación es algo santo.
+	Esto permite hacer entender a la gerencia que la inversión vale la pena
+
+	"Si no puedes explicar algo de manera simple, es porque no lo entiendes bien"
+
+
+
+Algebra lineal para data science
+
+	* Valores escalares: Es un valor contenido en cualquier espacio. En programación es igual a guardar un valor en
+		una variable:
+
+			x = 5
+			Quiere decir que el valor escalar de 'x' es igual a 5.
+
+	* Vector: Es un arreglo o conjunto de números escalares:
+
+			Siendo x un vector:
+					x = [x1, x2, x3] 
+
+			Los valores x1, x2, x3 son valores escalares.
+
+		El número de elementos que contiene el vector se llama 'orden' o 'longitud'. Ese orden representa el número 
+		de puntos que tiene nuestro vector en el espacio.
+
+	* Matrices: Es un conjunto de vectores que forman su orden o longitud de acuerdo al número de filas y de columnas
+		resultantes.
+
+			Siendo vectores x, y, z con valores [x1, x2, x3], [y1, y2, y3], [z1, z2, z3] respectivamente:
+
+				[x1, x2, x3]
+
+			M =	[y1, y2, y3]
+
+				[z1, z2, z3]
+
+		M es la matriz que forma al unir los 3 vectores. El número de filas y de columnas define su orden, en este
+		caso es de orden/longitud '3x3'.
+
+	* Producto punto o escalar de vectores: En machine learning se una mucho el producto punto. Se trata de la suma 
+		de productos de cada valor escalar que contiene el vector.
+
+			x = [4, 10 , 21]
+
+			y = [10, 0, 21]
+
+			El producto escalar es = (4*10) + (10*0) + (12*21) = (40) + (0) + (252) = 292
+
+
+	* Resolviendo sistema de ecuaciones lineales: Hablando puntualmente de álgebra lineal, el interés esta siempre
+		en resolver sistema de ecuaciones de la forma: 
+
+			Ax = b
+			
+			Donde: 
+				A es una matriz o conjunto de vectores de entrada. 
+
+				x es la representación de los resultados que queremos encontrar 
+
+				b es un vector del mismo orden que el sistema de ecuaciones, en ingles conocido como “label"
+
+			
+			Un ejemplo de cómo veríamos esto: 
+
+ 				[ 10 , 2 , 31 ]         [x1]        [1]
+
+				[ 12 , 32, 21]   *    [x2]      =    [3]
+
+				[ 92 , 21, 92 ]       [x3]         [4]                                                   
+
+ 				Y el reto es justo encontrar los valores de x1, x2, x3.
+
+	
+	Para Data Science, y por la naturaleza de computar estos datos usaremos algo llamado Método Iterativo. En Machine
+	Learning, contemos con algunos ya establecidos cómo: “Stochastic Gradient Descent”, “Conjugate Gradient Methods”
+	y “Alternating Least Squares”. 
+
+
+Basicos de probabilidad
+
+	Muchos de los resultados que vamos a interpretar en nuestro día a día como Data Scientist tienen que ver con 
+	reglas de probabilidad y estadística. Repasemos algunos conceptos básicos para entender mejor nuestros ejemplos: 
+
+ 	* Probabilidad: La probabilidad es la forma en la que medimos que un evento suceda y siempre será un numero que
+ 		se encuentre entre 0 y 1, aunque también puede representarse cómo porcentaje.
+
+ 		De manera de representación, la probabilidad tiene una notación muy particular: 
+
+			P( nombre del evento ) = 0.4.  
+			
+			Lo cuál se lee como: La probabilidad del nombre del evento suceda es igual a 0.4 
+
+ 			
+ 		Un ejemplo sería cuando lanzas una moneda, solo podemos tener 2 resultados: 
+
+ 			Sale cara o sale cruz, por lo tanto tenemos un 50% de probabilidad que salga una u otra opción. 
+
+			- Algo importante que destacar aquí es que la suma de todos los eventos posibles debe ser siempre 1.0.
+
+ 				P(Cara) + P(Cruz) = 1 
+
+ 
+		Pero, ¿Cómo obtenemos la probabilidad de un evento si no la conocemos:
+
+ 			La probabilidad de ese evento es igual a la población parcial de ese evento entre el numero total de
+ 			toda la población, dicho de otro modo: 
+
+ 				P(E) = (Población de ese evento ) / Población total 
+
+ 			Propongamos un ejemplo:
+
+ 				En una baraja de cartas, quiero calcular la probabilidad de obtener un “ace”. Si recordamos, en toda
+ 				la baraja, tenemos 4 aces, y esta compuesta por 52 cartas en total, entonces la probabilidad de 
+ 				obtener un Ace es de: 
+
+ 					P(Ace) = 4/52 = 0.077
+
+ 	* Probabilidad condicional: Cuando queremos predecir un nuevo evento dado otro que ya sucedió usamos algo llamado
+ 		 probabilidad condicional, y su naturaleza de predecir el futuro justo es la base de Machine Learning y de 
+ 		 ahí la importancia de conocerla.
+
+		Por definición, la probabilidad de que un evento suceda dado otro es: 
+
+			P( E | F ) =  P(E∩F) / P(F) 
+
+ 		donde: 
+
+ 			E es el evento del cuál nos interesa calcular su probabilidad 
+			F es el evento que ya sucedió
+			P(E∩F) Es la probabilidad donde co-existen el evento E y F 
+
+ 			Veamos esto reflejado esto con nuestro ejemplo anterior: 
+
+ 				Ahora quiero calcular la probabilidad de que el ace de la baraja sea de color rojo. 
+				Bien, si recordamos, solo 2 de los ace que podremos obtener en toda la baraja son rojos, por lo tanto:
+
+ 					P(E∩F) = 2 / 52 = 0.038
+
+ 				Y recordando que la probabilidad de obtener un ace cualquiera es de: 
+
+ 					P(Ace) = 4/52 = 0.077
+
+ 				Entonces, la probabilidad de que cuando salga un Ace, este sea de color rojo es de: 
+
+ 					P( E | F ) = (2 / 52) / (4 / 52) = 0.5
+
+ 		La probabilidad nos permite tener una clasificación de la información que estamos analizando y tal como hemos aprendido: es parte del ciclo de trabajo de un Data Scientist.
+
+		visitar: http://www.vitutor.com/pro/2/a_g.html
+ 
+
+
+Hacer que las maquinas hagan todo:
+
+ 	Después de construir un modelo matemático no queremos hacerlo funcionar manualmente, para esto construimos 
+ 	sistemas para automatizar este proceso.
+
+
+
+Objetos del mundo real en el espacio vectorial y métricas de distancia
+
+	Existen varias estrategias para codificar patrones, para esto debemos codificar en términos numéricos, mientras
+	mayor creatividad al construir estos mayor cantidad de patrones puedes encontrar.
+
+	Por ejemplo:
+		Si quisiéramos encontrar patrones de las compras en una tienda podríamos tomar el peso, valor y	dimensiones
+		de los productos, pero podríamos ser más creativos:
+
+			* Podemos medir todos los identificadores únicos de las personas que han comprado el producto en las
+			últimas cuatro semanas, a través de todos los productos solo fueron cinco personas distintas, esto lo representamos en una lista de cinco números (cada persona).
+
+			Posibles representaciones:
+				- Si el primer producto fue comprado por las personas 1,2,5 tendríamos una lista [1,1,0,0,1]
+				- Si representamos que productos compro cada una de las personas tendríamos 5 listas.
+				- Si estas listas las graficamos en un plano de X y Y, visualizando una lista de tuplas y si lo
+					hacemos con más dimensiones da exactamente igual.
+
+			* Analizar las gráficas: Si dos puntos en el gráfico se encuentran juntos uno al otro, esos dos puntos se
+				comportan de una manera similar, si tenemos dos puntos lejanos se comportan de una manera diferente.
+
+				Esto lo medimos de una escala de 0 a 1, usando las métricas de distancia usando coordenadas del
+				espacio vectorial:
+					- Distancia de manhattan.
+					- Distancia de jacard.
+					- Distancia euclidiana.
+					- Distancia cosine.
+
+
+Ejemplo de espacio vectorial y métricas de distancia (foursquare_reconmendaciones.ipynb)
+
+	Similaridad de jaccard:
+
+		Dados dos conjuntos A y B, la similaridad es igual a: largo(interseccion de A y B) / largo(union de A y B)
+
+		--- con pandas
+
+			>>> a = {1, 2, 4}
+			>>> b = {3, 2, 4}
+			>>> i = a.intersection(b)
+			>>> u = a.union(b)
+			>>> len(i) / len(u)
+
+
+	* Mis recomendaciones son tan buenas como se hayan definido (modelado) los usuarios en un principio 
+
+
+Como ser un data scientist
+
+	* Carrera universitaria
+	* Bootcamp
+	* Auto aprendizaje
+
+
+
+Qué es big data y cuál es su papel en datascience?
+
+	¿Qué es big data?
+		Si tus datos caben en memoria RAM no tienes en big data, este se aplica en procesos de análisis de datos que
+		requieren gran cantidad de datos y estos deben ser analizados a través de varios servidores.
+
+	¿Quién actualmente usa big data?
+		Empresas que manejan millones de datos como google, facebook, etc. Cada vez procesamos más datos en la nube
+		por esto en un futuro tal vez no necesitemos usar big data, tendremos herramientas para procesar esta
+		cantidad de datos desde un computador personal.
+
+	¿Porque existen herramientas cómo spark, big query? y ¿Qué aportan al proceso de data science?
+		Al aumentar la cantidad de datos necesitaremos más poder computacional, para hacer computación distribuida
+		de nuestros datos necesitamos este tipo de herramientas.
+
+	¿Cómo data scientist es necesario solo aprender sobre big data?
+		Hoy un data scientist sabe de todo, pero entre mas madura el campo vemos especialización.
+
+	¿Cuales son tus referencias favoritas?
+		https://www.kaggle.com/
+		http://www.datatau.com/
+		https://news.ycombinator.com/
+
+		https://cognitiveclass.ai/
